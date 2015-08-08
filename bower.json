@@ -1,0 +1,7 @@
+{
+  "name": "douglas-mason.github.io",
+  "dependencies": {
+    "materialize": "~0.97.0",
+    "prism": "~1.0.1"
+  }
+}
