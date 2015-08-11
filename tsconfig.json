@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "module": "amd",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "target": "es5",
+        "out": "app/app.js"
+    },
+    "files": [
+        "app/app.ts",
+        "app/router.ts",
+        "app/home/home.controller.ts",
+        "app/directives/syntax_highlighter.ts",
+        "typings/tsd.d.ts"
+    ]
+}

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html data-ng-app="app">
 
 <head>
+    <base href="/">
     <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.css">
     <link rel="stylesheet" href="bower_components/prism/themes/prism-okaidia.css">
     <link rel="stylesheet" href="styles/main.css">
@@ -9,55 +10,21 @@
 
 <body>
     <div>
-    <nav>
-        <div class="nav-wrapper">
-          <a href="#!" class="brand-logo">Douglas Mason</a>
-          <!-- <a href="#" -->
-          <!--     class="button-collapse"> -->
-          <!--     <i class="material-icons">menu</i></a> -->
-          <!-- <ul class="right hide-on-med-and-down"> -->
-          <!--   <li><a href="#">About</a></li> -->
-          <!--   <li><a href="#">Contact</a></li> -->
-          <!--   <li><a href="#">Social</a></li> -->
-          <!-- </ul> -->
-          <!-- <ul class="side-nav" id="mobile-demo"> -->
-          <!--   <li><a href="#">About</a></li> -->
-          <!--   <li><a href="#">Contact</a></li> -->
-          <!--   <li><a href="#">Social</a></li> -->
-          <!-- </ul> -->
-        </div>
-    </nav>
+        <nav>
+            <div class="nav-wrapper">
+              <a href="/" class="brand-logo">Douglas Mason</a>
+            </div>
+        </nav>
     </div>
     <div class="container">
-        <div class="row">
-        </div>
-      <div class="row">
-        <div class="col s12 m5">
-          <div class="card">
-            <div class="card-image">
-              <img src="images/profile.png">
-              <span class="card-title">Find out about me</span>
-            </div>
-            <div class="card-content">
-              <p>For now, you'll have to check out my social profiles.</p>
-            </div>
-            <div class="card-action">
-                <p><a href="https://www.linkedin.com/in/douglasmasonjr">LinkedIn</a></p>
-                <p><a href="http://www.twitter.com/douglas_mason">Twitter</a></p>
-                <p><a href="http://www.github.com/douglas-mason">Github</a></p>
-            </div>
-          </div>
-        </div>
-            <div class="col s12 m5">
-                <pre>
-                    <code class="language-git">git commit -m "WIP..."</code>
-                </pre>
-            </div>
-      </div>
+        <div data-ng-view></div>
     </div>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/materialize/dist/js/materialize.js"></script>
     <script src="bower_components/prism/prism.js"></script>
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-route/angular-route.js"></script>
+    <script src="app/app.js"></script>
     <script>
         $(document).ready(function(){
           $(".button-collapse").sideNav();
@@ -70,8 +37,6 @@
 
       ga('create', 'UA-66098066-1', 'auto');
       ga('send', 'pageview');
-
     </script>
 </body>
-
 </html>
