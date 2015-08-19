@@ -3,7 +3,7 @@
       <div class="card">
         <div class="card-image">
           <img src="images/profile.png">
-          <span class="card-title">Find out about me</span>
+          <span class="card-title">{{ctrl.title}}</span>
         </div>
         <div class="card-content">
             <p>This site is a work in progress.  I am migrating my previous site from another host which means now I can change things that have been bugging me and finally get rid of that self hosted Word Press blog that I've been wanting to swap out.</p>
@@ -24,3 +24,4 @@
         </pre>
     </div>
 </div>
+<google-analytics ng-if="ctrl.enableGA()"></google-analytics>

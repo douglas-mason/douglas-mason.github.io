@@ -11,6 +11,7 @@
         "app/router.ts",
         "app/home/home.controller.ts",
         "app/directives/syntax_highlighter.ts",
+        "app/directives/google_analytics.ts",
         "typings/tsd.d.ts"
     ]
 }
