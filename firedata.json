@@ -1,0 +1,12 @@
+{
+    "blog": {
+        "posts": [
+            {
+                "title": "test",
+                "body": "the body",
+                "tags": "angular, firebase",
+                "category": "programming"
+            }
+        ]
+    }
+}

@@ -10,8 +10,12 @@
         "app/app.ts",
         "app/router.ts",
         "app/home/home.controller.ts",
+        "app/admin/admin.controller.ts",
+        "app/admin/addPost.controller.ts",
+        "app/admin/editPost.controller.ts",
         "app/directives/syntax_highlighter.ts",
         "app/directives/google_analytics.ts",
+        "app/interfaces/IPost",
         "typings/tsd.d.ts"
     ]
 }

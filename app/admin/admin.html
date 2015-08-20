@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col s12">
+        <table class="hoverable">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Date</th>
+                    <th>Enabled</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="post in ctrl.posts">
+                    <td>{{post.title}}</td>
+                    <td>TODO</td>
+                    <td>TODO</td>
+                    <td><a href="/blog/post/edit/{{post.$id}}">Edit</a></td>
+                    <td><a href="#" ng-click="ctrl.deletePostClick(post)">Delete</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row">
+    <div class="col s12">
+        <div class="row">
+            <div class="col s12">
+                <a class="btn-floating btn-large waves-effect waves-light blue right" href="/blog/post/add"><i class="material-icons">add</i></a>
+            </div>
+        </div>
+    </div>
+</div>

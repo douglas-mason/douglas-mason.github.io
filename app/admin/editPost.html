@@ -1,0 +1,32 @@
+<div class="row">
+    <form class="col s12">
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="title" type="text" class="validate" ng-model="ctrl.post.title">
+                <label class="active" for="title">Title</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea id="post-body" class="materialize-textarea" ng-model="ctrl.post.body"></textarea>
+                <label class="active" for="post-body">Body</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="tags" type="text" class="validate" ng-model="ctrl.post.tags">
+                <label class="active" for="tags">Tags</label> </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="category" type="text" class="validate" ng-model="ctrl.post.category">
+                <label class="active" for="category">Category</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <a class="btn-floating btn-large waves-effect waves-light blue right" ng-click="ctrl.editPostClick()"><i class="material-icons">edit</i></a>
+            </div>
+        </div>
+    </form>
+</div>
