@@ -61,8 +61,7 @@ var dmIO;
         }
         AddPostCtrl.prototype.addPostClick = function () {
             var _this = this;
-            //TODO: move to service
-            this.posts.$add(this.newPost).then(function (ref) { _this.$location.url('/admin'); });
+            this.posts.$add(this.newPost).then(function (ref) { _this.$location.url('/#admin'); });
         };
         AddPostCtrl.$inject = [
             '$scope',
@@ -79,23 +78,24 @@ var dmIO;
 (function (dmIO) {
     'use strict';
     var EditPostCtrl = (function () {
-        function EditPostCtrl($scope, $firebaseObject, $routeParams) {
+        function EditPostCtrl($scope, $firebaseObject, $routeParams, $location) {
             this.$scope = $scope;
             this.$firebaseObject = $firebaseObject;
             this.$routeParams = $routeParams;
+            this.$location = $location;
             var postId = $routeParams['postId'];
-            this.formMode = 'addNew';
-            //TODO: move to factory
             var ref = new Firebase("https://sizzling-inferno-6982.firebaseio.com/blog/posts/" + postId);
             this.post = $firebaseObject(ref);
         }
         EditPostCtrl.prototype.editPostClick = function () {
-            this.post.$save();
+            var _this = this;
+            this.post.$save().then(function (ref) { _this.$location.url('/#admin'); });
         };
         EditPostCtrl.$inject = [
             '$scope',
             '$firebaseObject',
-            '$routeParams'
+            '$routeParams',
+            '$location'
         ];
         return EditPostCtrl;
     })();
@@ -150,7 +150,6 @@ var dmIO;
 (function (dmIO) {
     'use strict';
     angular.module('app').config(function ($routeProvider, $locationProvider) {
-        $locationProvider.html5Mode(true).hashPrefix('!');
         $routeProvider.when('/', {
             'controllerAs': 'ctrl',
             'controller': 'homeCtrl',

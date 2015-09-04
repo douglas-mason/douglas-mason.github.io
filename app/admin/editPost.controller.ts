@@ -5,24 +5,23 @@ module dmIO {
   'use strict';
 
   export class EditPostCtrl {
-    formMode: string; //TODO: make enum
     post: any;
     public static $inject = [
       '$scope',
       '$firebaseObject',
-      '$routeParams'
+      '$routeParams',
+      '$location'
     ]
     constructor(private $scope: ng.IScope,
                 private $firebaseObject: any,
-                private $routeParams: angular.route.IRouteParamsService){
+                private $routeParams: angular.route.IRouteParamsService,
+                private $location: ng.ILocationService){
       var postId = $routeParams['postId'];
-      this.formMode = 'addNew';
-      //TODO: move to factory
       var ref = new Firebase(`https://sizzling-inferno-6982.firebaseio.com/blog/posts/${postId}`);
       this.post = $firebaseObject(ref);
     }
     editPostClick():void{
-      this.post.$save();
+      this.post.$save().then((ref) => { this.$location.url('/#admin'); });
     }
   }
 }

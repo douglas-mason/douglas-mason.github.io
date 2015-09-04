@@ -19,8 +19,7 @@ module dmIO {
       this.posts = $firebaseArray(ref);
     }
     addPostClick():void{
-      //TODO: move to service
-      this.posts.$add(this.newPost).then((ref) => { this.$location.url('/admin'); });
+      this.posts.$add(this.newPost).then((ref) => { this.$location.url('/#admin'); });
     }
   }
 }
