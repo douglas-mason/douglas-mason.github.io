@@ -1,6 +1,8 @@
-_site/
-.sass-cache/
+_site
+.sass-cache
+node_modules
+_drafts
 
-#vim
+#Vim
 *.swp
 *~
